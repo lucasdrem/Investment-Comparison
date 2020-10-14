@@ -18,8 +18,8 @@ import comdadoLogin from '../../services/SignIn/loginComdinheiro';
 
 const SignIn: React.FC<RouteComponentProps> = ({ history }) => {
   const [initialValuesLogin] = useState({
-    email: 'grober39@gmail.com',
-    password: 'Teste123',
+    email: '',
+    password: '',
   });
   const { addToast } = useToast();
 
