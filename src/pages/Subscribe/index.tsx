@@ -31,9 +31,9 @@ const SignIn: React.FC<RouteComponentProps> = ({ history }) => {
   const { fontColor } = useViewMode();
 
   const onSubmitFormLogin = useCallback(
-    async (values, { setSubmitting }) => {
+    async values => {
       cadastraUsuario(values.name, values.email, values.password)
-        .then(response => {
+        .then(() => {
           addToast({
             type: 'success',
             title: 'Success!',
@@ -41,7 +41,7 @@ const SignIn: React.FC<RouteComponentProps> = ({ history }) => {
           });
           history.push('/');
         })
-        .catch(e => {
+        .catch(() => {
           addToast({
             type: 'error',
             title: 'Subscribe Error',

@@ -53,6 +53,7 @@ const Dashboard: React.FC<Props> = ({
         inputCalcBasisValue,
       });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reducerDashboardAssets, inputCalcBasisValue]);
 
   const onClickCalcBasis = useCallback(() => {
@@ -66,6 +67,7 @@ const Dashboard: React.FC<Props> = ({
 
   const switchViewMode = useCallback(() => {
     changeViewMode();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

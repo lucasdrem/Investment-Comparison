@@ -41,6 +41,7 @@ const ViewModeProvider: React.FC = ({ children }) => {
     setDarkMode(value => {
       return !value;
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [darkMode]);
 
   return (

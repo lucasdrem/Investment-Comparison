@@ -72,6 +72,7 @@ const InputAssetDashboard: React.FC<Props> = ({
       setAssetsAutocompleteOptions([]);
       tickerValue.value = '';
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const searchAssetAutocomplete = useCallback(async e => {

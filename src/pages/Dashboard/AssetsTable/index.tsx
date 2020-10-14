@@ -28,6 +28,7 @@ const AssetsTable: React.FC<AssetsTable> = ({
     asset => {
       removeAsset && removeAsset(asset);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [infoAssets],
   );
 
@@ -45,7 +46,7 @@ const AssetsTable: React.FC<AssetsTable> = ({
                 <AiOutlineDelete
                   color={theme.divisionGridColor}
                   size={26}
-                  onClick={e => deleteAsset(asset)}
+                  onClick={() => deleteAsset(asset)}
                   id="dashboard__table--delete-icon"
                 />
               </div>
